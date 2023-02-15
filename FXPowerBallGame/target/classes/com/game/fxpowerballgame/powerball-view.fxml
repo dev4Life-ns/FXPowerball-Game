@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="850.0" styleClass="game-background" stylesheets="@../../../styles/power-styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.fxpowerballgame.PowerBallController">
+   <top>
+      <HBox prefHeight="52.0" prefWidth="600.0" styleClass="header" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="25.0" top="10.0" />
+         </padding>
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header-font" text="Power Ball Game" />
+            <Separator prefHeight="0.0" prefWidth="626.0">
+               <HBox.margin>
+                  <Insets left="10.0" top="15.0" />
+               </HBox.margin>
+            </Separator>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="484.0" prefWidth="231.0" styleClass="leftSidebar" stylesheets="@../../../styles/power-styles.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="50.0" top="30.0" />
+         </BorderPane.margin>
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header-font" text="Play Balance">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Chalkboard" size="21.0" />
+               </font>
+            </Text>
+            <Region prefHeight="26.0" prefWidth="192.0" />
+            <AnchorPane prefHeight="49.0" prefWidth="194.0">
+               <children>
+                  <TextField fx:id="playBalance_tf" alignment="CENTER" editable="false" layoutX="8.0" layoutY="-1.0" prefHeight="49.0" prefWidth="188.0" styleClass="resultsLabel" stylesheets="@../../../styles/power-styles.css" text="100">
+                     <effect>
+                        <InnerShadow choke="0.09" height="12.1" radius="10.74" width="32.86" />
+                     </effect>
+                     <font>
+                        <Font name="Chalkboard" size="27.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" layoutX="86.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/pinButton.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Region prefHeight="19.0" prefWidth="172.0" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header-font" text="Total Wins" />
+            <Region prefHeight="19.0" prefWidth="172.0" />
+            <AnchorPane prefHeight="49.0" prefWidth="172.0">
+               <children>
+                  <TextField fx:id="totalWins_tf" alignment="CENTER" editable="false" layoutX="9.0" layoutY="-1.0" prefHeight="49.0" prefWidth="185.0" styleClass="resultsLabel" stylesheets="@../../../styles/power-styles.css">
+                     <effect>
+                        <InnerShadow choke="0.09" height="12.1" radius="10.74" width="32.86" />
+                     </effect>
+                     <font>
+                        <Font name="Chalkboard" size="27.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="27.0" fitWidth="39.0" layoutX="90.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/pinButton.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Region prefHeight="20.0" prefWidth="172.0" />
+            <AnchorPane>
+               <children>
+                  <JFXCheckBox fx:id="autoPlay_cb" checkedColor="#f2aa58" layoutX="18.0" layoutY="-3.0" onAction="#groupCheckboxes" prefHeight="34.0" prefWidth="176.0" styleClass="header-font" stylesheets="@../../../styles/power-styles.css" text="Auto Play" unCheckedColor="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXCheckBox>
+               </children>
+            </AnchorPane>
+            <Region prefHeight="17.0" prefWidth="211.0" />
+            <JFXCheckBox fx:id="manualPlay_cb" checkedColor="#f2aa58" onAction="#groupCheckboxes" prefHeight="26.0" prefWidth="176.0" styleClass="header-font" stylesheets="@../../../styles/power-styles.css" text="Manual Play" unCheckedColor="#ebebeb">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </JFXCheckBox>
+            <Region prefHeight="20.0" prefWidth="172.0" />
+            <JFXButton fx:id="replay_btn" buttonType="RAISED" onAction="#replayGame" prefHeight="43.0" prefWidth="177.0" ripplerFill="#ff9d4d" stylesheets="@../../../styles/power-styles.css" text="Replay" textAlignment="CENTER" textFill="WHITE">
+               <styleClass>
+                  <String fx:value="replay-button" />
+                  <String fx:value="button-font" />
+               </styleClass></JFXButton>
+            <Region prefHeight="20.0" prefWidth="172.0" />
+            <JFXButton fx:id="quiteGame_btn" buttonType="RAISED" onAction="#quitGameFunction" prefHeight="43.0" prefWidth="172.0" ripplerFill="#265075" stylesheets="@../../../styles/power-styles.css" text="Quit Game">
+               <font>
+                  <Font name="Apple Color Emoji" size="13.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="quit-button" />
+                  <String fx:value="button-font" />
+               </styleClass></JFXButton>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets bottom="50.0" left="50.0" right="50.0" />
+         </BorderPane.margin>
+         <children>
+            <Region prefHeight="38.0" prefWidth="529.0" />
+            <Label fx:id="gameResults_lb" alignment="CENTER" prefHeight="30.0" prefWidth="549.0" styleClass="resultsLabel" stylesheets="@../../../styles/power-styles.css" textFill="#575757">
+               <font>
+                  <Font name="Chalkboard SE Light" size="15.0" />
+               </font></Label>
+            <Region prefHeight="18.0" prefWidth="529.0" />
+            <HBox fx:id="powerBall_hb" alignment="CENTER" prefHeight="93.0" prefWidth="529.0" spacing="20.0" styleClass="powerballDisplaybar" stylesheets="@../../../styles/power-styles.css">
+               <padding>
+                  <Insets bottom="8.0" />
+               </padding>
+               <children>
+                  <TextField fx:id="powerball1_tf" alignment="CENTER" editable="false" prefHeight="73.0" prefWidth="76.0" styleClass="powerball" stylesheets="@../../../styles/power-styles.css">
+                     <font>
+                        <Font name="Chalkduster" size="24.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="powerball2" alignment="CENTER" editable="false" prefHeight="73.0" prefWidth="76.0" styleClass="powerball" stylesheets="@../../../styles/power-styles.css">
+                     <font>
+                        <Font name="Chalkduster" size="24.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="powerball3" alignment="CENTER" editable="false" prefHeight="73.0" prefWidth="76.0" styleClass="powerball" stylesheets="@../../../styles/power-styles.css">
+                     <font>
+                        <Font name="Chalkduster" size="24.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="powerball4" alignment="CENTER" editable="false" prefHeight="73.0" prefWidth="76.0" styleClass="powerball" stylesheets="@../../../styles/power-styles.css">
+                     <font>
+                        <Font name="Chalkduster" size="24.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="powerball5" alignment="CENTER" editable="false" prefHeight="73.0" prefWidth="76.0" styleClass="powerball" stylesheets="@../../../styles/power-styles.css">
+                     <font>
+                        <Font name="Chalkduster" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect></HBox>
+            <Region prefHeight="56.0" prefWidth="529.0" />
+            <HBox fx:id="playerGuesses_hb" alignment="CENTER" prefHeight="88.0" prefWidth="529.0" spacing="20.0" styleClass="powerballDisplaybar" stylesheets="@../../../styles/power-styles.css">
+               <children>
+                  <TextField fx:id="pick1_tf" alignment="CENTER" prefHeight="58.0" prefWidth="70.0" styleClass="playerPicks" stylesheets="@../../../styles/power-styles.css">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkduster" size="22.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="pick2_tf" alignment="CENTER" prefHeight="58.0" prefWidth="70.0" styleClass="playerPicks" stylesheets="@../../../styles/power-styles.css">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Chalkduster" size="22.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="pick3_tf" alignment="CENTER" prefHeight="58.0" prefWidth="70.0" styleClass="playerPicks" stylesheets="@../../../styles/power-styles.css">
+                     <font>
+                        <Font name="Chalkduster" size="22.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="pick4_tf" alignment="CENTER" prefHeight="58.0" prefWidth="70.0" styleClass="playerPicks" stylesheets="@../../../styles/power-styles.css">
+                     <font>
+                        <Font name="Chalkduster" size="22.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="pick5_tf" alignment="CENTER" prefHeight="58.0" prefWidth="70.0" styleClass="playerPicks" stylesheets="@../../../styles/power-styles.css">
+                     <font>
+                        <Font name="Chalkduster" size="22.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="8.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect></HBox>
+            <Region prefHeight="20.0" prefWidth="529.0" />
+            <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="440.0" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Region prefHeight="8.0" prefWidth="529.0" />
+            <HBox alignment="CENTER" prefHeight="137.0" prefWidth="429.0">
+               <children>
+                  <JFXButton fx:id="playButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#autoPlayFunction" prefHeight="125.0" prefWidth="140.0" ripplerFill="#ff8e61" styleClass="play-button" stylesheets="@../../../styles/power-styles.css" text="Play" textFill="WHITE">
+                     <font>
+                        <Font name="Chalkduster" size="28.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="38.79" radius="29.2725" spread="0.26" width="80.3" />
+                     </effect>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin></HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

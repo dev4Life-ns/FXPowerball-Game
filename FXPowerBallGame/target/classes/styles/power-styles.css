@@ -1,0 +1,90 @@
+.game-background{
+    -fx-background-image:url('../images/woodbackground.png');
+    -fx-pref-width: 860px;
+    -fx-pref-height: 640px;
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+
+.header{
+    -fx-background-color: #455158;
+    -fx-background-radius: 0 0 20px 0;
+}
+
+.header-font{
+    -fx-font-family: "Chalkboard";
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+.button-font{
+    -fx-font-family:"Chalkduster";
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+}
+
+.quit-button{
+    -fx-background-color: #b56425;
+    -fx-background-radius: 15px;
+}
+
+.replay-button{
+    -fx-background-color: #193445;
+    -fx-background-radius: 15px;
+}
+
+.text-font{
+    -fx-font-family: "Chalkboard SE";
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+
+.resultsLabel{
+    -fx-background-color: #EDEBE5;
+}
+
+.textfield{
+    -fx-background-color: transparent;
+    -fx-border-radius:10px;
+}
+
+.powerball{
+    -fx-background-image: url('../images/powerball_image.png');
+    -fx-background-position: center;
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+
+
+}
+
+.powerballDisplaybar{
+    -fx-background-image: url('../images/contentsbar.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+
+.playerPicks{
+    -fx-background-image: url('../images/userinput.png');
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+
+}
+
+.leftSidebar{
+    -fx-background-image: url('../images/sidebarbg.png');
+    -fx-background-size: contain;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+
+}
+
+.play-button{
+    -fx-background-color: #b30909;
+    -fx-background-radius: 100%;
+
+}
+
