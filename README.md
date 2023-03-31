@@ -1,4 +1,4 @@
-# :video_game: FX Powerball Game
+# :slot_machine: FX Powerball Game
 
  ## Description
 
